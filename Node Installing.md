@@ -25,4 +25,7 @@ npm install --save express body-parser multer
 # interfacing Node with MySQL
 npm install --save mysql
 
+# Install the MongoDB Node.js Driver
+npm install mongodb
+
 
