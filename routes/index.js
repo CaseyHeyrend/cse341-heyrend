@@ -1,7 +1,11 @@
-const routes = require('express').Router();
+const express = require('express');
+const router = express.Router();
 const baseController = require('../controllers');
 
 // Lesson 1 or Branch Lesson01
-routes.get('/', baseController.getName);
+router.get('/', baseController.getName);
 
-module.exports = routes;
+// lesson 2
+//router.use('/contacts', require('./contacts'))
+
+module.exports = router;

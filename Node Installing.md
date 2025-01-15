@@ -28,4 +28,7 @@ npm install --save mysql
 # Install the MongoDB Node.js Driver
 npm install mongodb
 
+# Install the dotenv node package
+npm i --save dotenv
+
 

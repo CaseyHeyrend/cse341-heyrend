@@ -19,6 +19,8 @@
   "homepage": "https://github.com/CaseyHeyrend/cse341-heyrend#readme",
   "description": "",
   "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongodb": "^6.12.0"
   },
