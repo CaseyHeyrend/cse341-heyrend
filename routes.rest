@@ -1,3 +1,21 @@
-// LOCALHOST ### GET http://localhost:3000/ ### GET http://localhost:3000/ ### GET http://localhost:3000/
+// LOCALHOST 
+### 
+GET http://localhost:3000/ 
+### 
+GET http://localhost:3000/ 
+### 
+GET http://localhost:3000/
 
-### GET all contacts GET http://localhost:3000/
+### 
+GET all contacts GET http://localhost:3000/
+
+// PRODUCTION Deploy 
+### 
+GET https://cse341-heyrend.onrender.com
+### 
+GET https://cse341-heyrend.onrender.com 
+
+### 
+GET https://cse341-heyrend.onrender.com
+### 
+GET https://cse341-heyrend.onrender.com
