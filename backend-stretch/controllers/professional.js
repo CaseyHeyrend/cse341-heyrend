@@ -1,5 +1,6 @@
-const mongodb = require('../../backend/db/connect');
+const mongodb = require('../db/connect');
 
+// Data for html page
 const getData = async (req, res, next) => {
   const result = await mongodb.getDb().db().collection('user').find();
   result.toArray().then((lists) => {
