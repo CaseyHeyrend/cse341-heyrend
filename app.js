@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const professionalRoutes = require('./routes/professional');
+const professionalRoutes = require('./backend/routes/professional.js');
 
 const port = process.env.PORT || 8080;
 const app = express();
