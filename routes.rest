@@ -7,7 +7,7 @@ GET http://localhost:8080/contacts
 GET http://localhost:8080/
 
 ### 
-GET all contacts GET http://localhost:8080/
+GET all contacts GET http://localhost:8080/contacts
 
 // PRODUCTION Deploy 
 ### 
