@@ -6,6 +6,6 @@ const baseController = require('../controllers');
 router.get('/', baseController.getName);
 
 // lesson 2
-//router.use('/contacts', require('./contacts'))
+router.use('/contacts', require('./contacts'))
 
 module.exports = router;
