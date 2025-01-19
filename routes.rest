@@ -1,21 +1,18 @@
 // LOCALHOST 
 ### 
-GET http://localhost:8080/ 
-### 
 GET http://localhost:8080/contacts
+### 
+GET http://localhost:8080/contacts/678b5e47abc15a4fab3cd9a4
 ### 
 GET http://localhost:8080/
 
-### 
-GET all contacts GET http://localhost:8080/contacts
-
-// PRODUCTION Deploy 
+// PRODUCTION Deploy or render.com 
 ### 
 GET https://cse341-heyrend.onrender.com
 ### 
 GET https://cse341-heyrend.onrender.com 
 
 ### 
-GET https://cse341-heyrend.onrender.com
-### 
 GET https://cse341-heyrend.onrender.com/contacts
+### 
+GET https://cse341-heyrend.onrender.com/contacts/678b5e47abc15a4fab3cd9a4
