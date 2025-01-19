@@ -18,4 +18,4 @@ GET https://cse341-heyrend.onrender.com
 ### 
 GET https://cse341-heyrend.onrender.com
 ### 
-GET https://cse341-heyrend.onrender.com
+GET https://cse341-heyrend.onrender.com/contacts
