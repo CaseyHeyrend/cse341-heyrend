@@ -2,11 +2,13 @@
 ### 
 GET http://localhost:8080/contacts
 ### contact 1
-GET http://localhost:8080/contacts/678c9bdf138adebe1d6fcf60
+GET http://localhost:8080/contacts/679481e68472e3eea82cfd98
 ### contact 2
-GET http://localhost:8080/contacts/678c9bea138adebe1d6fcf61
+GET http://localhost:8080/contacts/6794821e8472e3eea82cfd9b
 ### contact 3
-GET http://localhost:8080/contacts/678c9bfc138adebe1d6fcf62
+GET http://localhost:8080/contacts/6794822a8472e3eea82cfd9c
+### 
+POST http://localhost:8080/contacts/679482658472e3eea82cfd9d
 
 // PRODUCTION Deploy or render.com 
 ### The index
@@ -15,8 +17,10 @@ GET https://cse341-heyrend.onrender.com
 ### 
 GET https://cse341-heyrend.onrender.com/contacts
 ### contact 1
-GET https://cse341-heyrend.onrender.com/contacts/678c9bdf138adebe1d6fcf60
+GET https://cse341-heyrend.onrender.com/contacts/679481e68472e3eea82cfd98
 ### contact 2
-GET https://cse341-heyrend.onrender.com/contacts/678c9bea138adebe1d6fcf61
+GET https://cse341-heyrend.onrender.com/contacts/6794821e8472e3eea82cfd9b
 ### contact 3
-GET https://cse341-heyrend.onrender.com/contacts/678c9bfc138adebe1d6fcf62
+GET https://cse341-heyrend.onrender.com/contacts/6794822a8472e3eea82cfd9c
+### 
+POST https://cse341-heyrend.onrender.com/contacts/679482658472e3eea82cfd9d

@@ -1,23 +1,32 @@
 {
-    "contact":{
+    "contact":[
+    {
         "firstName":"Joe" ,
         "lastName": "Heyrend",
         "email": "douglasfur@testmail.com",
         "favoriteColor": "Green",
         "birthday": "12/19/1996"
     },
-    "contact2":{
+    {
         "firstName":"Jean" ,
         "lastName": "Heyrend",
         "email": "jeanrheyrend42@test.com",
         "favoriteColor": "Blue",
         "birthday": "11/02/1942"
     },
-    "contact3":{
+    {
         "firstName":"Doug" ,
         "lastName": "Heyrend",
         "email": "dougtheskier@testmail.com",
         "favoriteColor": "Blue",
         "birthday": "07/09/1965"
+    },
+    {
+        "firstName":"Heidi" ,
+        "lastName": "Heyrend",
+        "email": "heidicrafter@test.com",
+        "favoriteColor": "Blue",
+        "birthday": "12/28/1964"
     }
+]
 }
