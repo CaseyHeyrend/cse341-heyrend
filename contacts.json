@@ -20,13 +20,6 @@
         "email": "dougtheskier@testmail.com",
         "favoriteColor": "Blue",
         "birthday": "07/09/1965"
-    },
-    {
-        "firstName":"Heidi" ,
-        "lastName": "Heyrend",
-        "email": "heidicrafter@test.com",
-        "favoriteColor": "Blue",
-        "birthday": "12/28/1964"
     }
 ]
 }

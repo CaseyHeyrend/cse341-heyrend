@@ -1,5 +1,7 @@
 // LOCALHOST 
-### 
+### Home or Name
+GET http://localhost:8080/
+### Get contacts
 GET http://localhost:8080/contacts
 ### contact 1
 GET http://localhost:8080/contacts/679481e68472e3eea82cfd98
@@ -7,14 +9,19 @@ GET http://localhost:8080/contacts/679481e68472e3eea82cfd98
 GET http://localhost:8080/contacts/6794821e8472e3eea82cfd9b
 ### contact 3
 GET http://localhost:8080/contacts/6794822a8472e3eea82cfd9c
-### 
-POST http://localhost:8080/contacts/679482658472e3eea82cfd9d
+### Create contact Post
+POST http://localhost:8080/contacts/ HTTP/1.1 content-type: application/json
+{
+"firstName": "Heidi", "lastName": "Heyrend", "email": "heidi.heyrend@test.com", "favoriteColor": "Blue", "birthday": "12/28/1964"
+}
+
+
 
 // PRODUCTION Deploy or render.com 
-### The index
+### The index and Name
 GET https://cse341-heyrend.onrender.com
 
-### 
+### contacts
 GET https://cse341-heyrend.onrender.com/contacts
 ### contact 1
 GET https://cse341-heyrend.onrender.com/contacts/679481e68472e3eea82cfd98
@@ -22,5 +29,8 @@ GET https://cse341-heyrend.onrender.com/contacts/679481e68472e3eea82cfd98
 GET https://cse341-heyrend.onrender.com/contacts/6794821e8472e3eea82cfd9b
 ### contact 3
 GET https://cse341-heyrend.onrender.com/contacts/6794822a8472e3eea82cfd9c
-### 
-POST https://cse341-heyrend.onrender.com/contacts/679482658472e3eea82cfd9d
+### Create contact Post
+POST https://cse341-heyrend.onrender.com/contacts/ HTTP/1.1 content-type: application/json
+{
+"firstName": "Heidi", "lastName": "Heyrend", "email": "heidi.heyrend@test.com", "favoriteColor": "Blue", "birthday": "12/28/1964"
+} 
