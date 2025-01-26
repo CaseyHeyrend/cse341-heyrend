@@ -4,16 +4,26 @@ GET http://localhost:8080/
 ### Get contacts
 GET http://localhost:8080/contacts
 ### contact 1
-GET http://localhost:8080/contacts/679481e68472e3eea82cfd98
+GET http://localhost:8080/contacts/6795a67f1a0707efddcbc1d2
 ### contact 2
-GET http://localhost:8080/contacts/6794821e8472e3eea82cfd9b
+GET http://localhost:8080/contacts/6795a6c21a0707efddcbc1d3
 ### contact 3
-GET http://localhost:8080/contacts/6794822a8472e3eea82cfd9c
+GET http://localhost:8080/contacts/6795a7131a0707efddcbc1d4
 ### Create contact Post
-POST http://localhost:8080/contacts/ HTTP/1.1 content-type: application/json
+POST http://localhost:8080/contacts/ 
+content-type: application/json
+
 {
 "firstName": "Heidi", "lastName": "Heyrend", "email": "heidi.heyrend@test.com", "favoriteColor": "Blue", "birthday": "12/28/1964"
 }
+### Put Contact
+PUT http://localhost:8080/contacts/6795a7fa1a0707efddcbc1d5
+content-type: application/json
+
+{
+"firstName": "Patricia", "lastName": "Gulick", "email": "P.Meyer@test.com", "favoriteColor": "Green", "birthday": "12/26/1942" 
+}
+
 
 
 
@@ -24,13 +34,23 @@ GET https://cse341-heyrend.onrender.com
 ### contacts
 GET https://cse341-heyrend.onrender.com/contacts
 ### contact 1
-GET https://cse341-heyrend.onrender.com/contacts/679481e68472e3eea82cfd98
+GET https://cse341-heyrend.onrender.com/contacts/6795a67f1a0707efddcbc1d2
 ### contact 2
-GET https://cse341-heyrend.onrender.com/contacts/6794821e8472e3eea82cfd9b
+GET https://cse341-heyrend.onrender.com/contacts/6795a6c21a0707efddcbc1d3
 ### contact 3
-GET https://cse341-heyrend.onrender.com/contacts/6794822a8472e3eea82cfd9c
+GET https://cse341-heyrend.onrender.com/contacts/6795a7131a0707efddcbc1d4
 ### Create contact Post
-POST https://cse341-heyrend.onrender.com/contacts/ HTTP/1.1 content-type: application/json
+POST https://cse341-heyrend.onrender.com/contacts/ 
+content-type: application/json
+
 {
 "firstName": "Heidi", "lastName": "Heyrend", "email": "heidi.heyrend@test.com", "favoriteColor": "Blue", "birthday": "12/28/1964"
 } 
+
+### Put Contact
+PUT https://cse341-heyrend.onrender.com/contacts/6795a7fa1a0707efddcbc1d5
+content-type: application/json
+
+{
+"firstName": "Patricia", "lastName": "Gulick", "email": "P.Meyer@test.com", "favoriteColor": "Green", "birthday": "12/26/1942" 
+}
