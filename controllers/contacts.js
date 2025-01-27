@@ -75,7 +75,7 @@ if (response.modifiedCount > 0) {
   res.status(500).json(response.error || "Some error occurred while updating the contact.");
 }
 }
-contactsController.deleteContactById = async (req, res, next) =>{
+contactsController.deleteContactById = async (req, res) =>{
   const userId = ObjectId.createFromHexString(req.params.id);
   const response = await mongodb
   .getDb()
