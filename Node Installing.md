@@ -31,4 +31,10 @@ npm install mongodb
 # Install the dotenv node package
 npm i --save dotenv
 
+# CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+npm install cors
+
+# Mongoose 8.0.0 was released on October 31, 2023. You can find more details on backwards breaking changes in 8.0.0 on our docs site.
+npm install mongoose
+
 
