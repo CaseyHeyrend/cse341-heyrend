@@ -36,5 +36,7 @@ npm install cors
 
 # Mongoose 8.0.0 was released on October 31, 2023. You can find more details on backwards breaking changes in 8.0.0 on our docs site.
 npm install mongoose
-
+ 
+# This module allows you to serve auto-generated swagger-ui generated API docs from express,
+npm install swagger-ui-express
 
