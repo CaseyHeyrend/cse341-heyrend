@@ -4,7 +4,7 @@ const ObjectId = require("mongodb").ObjectId;
 const contactsController = {}
 
 // the data for hmtl page
-contactsController.getData = async function (req, res, next) {
+contactsController.getData = async function (req, res) {
   const result = await mongodb.getDb().db().collection("contacts").find();
   result.toArray().then((lists) => {
     res.setHeader("Content-Type", "application/json");
@@ -12,7 +12,7 @@ contactsController.getData = async function (req, res, next) {
   });
 };
 
-contactsController.getAll = async (req, res, next) => {
+contactsController.getAll = async (req, res) => {
   const result = await mongodb.getDb().db().collection("contacts").find();
   result.toArray().then((lists) => {
     res.setHeader("Content-Type", "application/json");
@@ -20,7 +20,7 @@ contactsController.getAll = async (req, res, next) => {
   });
 };
 
-contactsController. getById = async (req, res, next) => {
+contactsController. getById = async (req, res) => {
   // const userId = new ObjectId(req.params.id);
   const userId = ObjectId.createFromHexString(req.params.id);
   const result = await mongodb
@@ -35,7 +35,7 @@ contactsController. getById = async (req, res, next) => {
 };
 // Week 3
 // Create - Post to insert Contact 
-contactsController.createContact = async (req, res, next) => {
+contactsController.createContact = async (req, res) => {
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -54,7 +54,7 @@ contactsController.createContact = async (req, res, next) => {
   }
 };
 // Updating the Contact
-contactsController.updateContactById = async (req, res, next) => {
+contactsController.updateContactById = async (req, res) => {
   const userId = ObjectId.createFromHexString(req.params.id);
   const contact = {
     firstName: req.body.firstName,
