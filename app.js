@@ -1,6 +1,7 @@
 // the modules
 const express = require("express");
 const bodyParser = require("body-parser");
+// eslint-disable-next-line no-unused-vars
 const MongoClient = require("mongodb").MongoClient;
 
 
@@ -19,12 +20,11 @@ app.use((req, res, next) => {
     next();
   });
 //  import routes
-const nameRoutes = require("./routes/index");
 const contactsRoutes = require("./routes/contacts");
 // routes
-app.use("/", nameRoutes);
 app.use("/contacts", contactsRoutes);
 
+// eslint-disable-next-line no-unused-vars
 mongodb.initDb((err, mongodb) => {
   if (err) {
     console.log(err);
