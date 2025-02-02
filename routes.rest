@@ -31,6 +31,8 @@ DELETE http://localhost:8080/contacts/679ed45141e852391a4d0249 HTTP/1.1
 content-type: application/json
 
 
+### Swagger
+GET http://localhost:8080/api-docs/
 
 // PRODUCTION Deploy or render.com 
 ### The index and Name
@@ -58,10 +60,12 @@ PUT https://cse341-heyrend.onrender.com/contacts/6795a7fa1a0707efddcbc1d5 HTTP/1
 content-type: application/json
 
 {
-"firstName": "Patricia", "lastName": "Gulick", "email": "P.Meyer@test.com", "favoriteColor": "Green", "birthday": "12/26/1942" 
+"firstName": "Patricia", "lastName": "Meyer", "email": "P.Meyer@test.com", "favoriteColor": "Green", "birthday": "12/26/1942" 
 }
 ### Delete Contact
 DELETE https://cse341-heyrend.onrender.com/contacts/679ed45141e852391a4d0249 HTTP/1.1
 content-type: application/json
 
+### Swagger
+GET https://cse341-heyrend.onrender.com/api-docs/
 
