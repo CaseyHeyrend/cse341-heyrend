@@ -9,4 +9,7 @@ router.get("/", baseController.getName);
 // Week 3
 router.use("/contacts", require("./contacts"))
 
+// Week 4
+router.use("/api-docs", require("./swagger"))
+
 module.exports = router;
