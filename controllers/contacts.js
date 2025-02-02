@@ -4,30 +4,39 @@ const ObjectId = require("mongodb").ObjectId;
 const contactsController = {}
 
 // the data for hmtl page
-contactsController.getData = async function (req, res) {
+// eslint-disable-next-line no-unused-vars
+contactsController.getData = async function (req, res, next) {
   const result = await mongodb.getDb().db().collection("contacts").find();
   result.toArray().then((lists) => {
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(lists);
   });
 };
-
-contactsController.getAll = async (req, res) => {
+// eslint-disable-next-line no-unused-vars
+contactsController.getAll = async (req, res, next) => {
+    /*
+    #swagger.summary = 'Get all contacts'
+    #swagger.description = 'Returns all contacts'
+  */
   const result = await mongodb.getDb().db().collection("contacts").find();
   result.toArray().then((lists) => {
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(lists);
   });
 };
-
-contactsController. getById = async (req, res) => {
+// eslint-disable-next-line no-unused-vars
+contactsController. getById = async (req, res, next) => {
+  /*
+    #swagger.summary = 'Get contact by id'
+    #swagger.description = 'Returns a contact with specified id'
+  */
   // const userId = new ObjectId(req.params.id);
   const userId = ObjectId.createFromHexString(req.params.id);
   const result = await mongodb
     .getDb()
     .db()
     .collection("contacts")
-    .find({ _id: userId });
+    .findOne({ _id: userId });
   result.toArray().then((lists) => {
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(lists[0]);
@@ -35,7 +44,12 @@ contactsController. getById = async (req, res) => {
 };
 // Week 3
 // Create - Post to insert Contact 
-contactsController.createContact = async (req, res) => {
+// eslint-disable-next-line no-unused-vars
+contactsController.createContact = async (req, res, next) => {
+  /*
+    #swagger.summary = 'Insert/Add a contact'
+    #swagger.description = 'Add a contact to the database'
+  */
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -46,7 +60,8 @@ contactsController.createContact = async (req, res) => {
   const response = await mongodb
   .getDb()
   .db()
-  .collection("contacts").insertOne(contact);
+  .collection("contacts")
+  .insertOne(contact);
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
@@ -54,7 +69,12 @@ contactsController.createContact = async (req, res) => {
   }
 };
 // Updating the Contact
-contactsController.updateContactById = async (req, res) => {
+// eslint-disable-next-line no-unused-vars
+contactsController.updateContactById = async (req, res, next) => {
+  /*
+    #swagger.summary = 'Update a existing contact by id'
+    #swagger.description = 'Update a existing contact in the database by id'
+  */
   const userId = ObjectId.createFromHexString(req.params.id);
   const contact = {
     firstName: req.body.firstName,
@@ -68,6 +88,7 @@ contactsController.updateContactById = async (req, res) => {
   .db()
   .collection("contacts")
   .replaceOne({ _id: userId }, contact);
+
 console.log(response);
 if (response.modifiedCount > 0) {
   res.status(204).send();
@@ -75,13 +96,19 @@ if (response.modifiedCount > 0) {
   res.status(500).json(response.error || "Some error occurred while updating the contact.");
 }
 }
-contactsController.deleteContactById = async (req, res) =>{
+// Delete Contact
+// eslint-disable-next-line no-unused-vars
+contactsController.deleteContactById = async (req, res, next) =>{
+  /*
+    #swagger.summary = "Delete a contact by id"
+    #swagger.description = "Delete a contact in the database by id"
+  */
   const userId = ObjectId.createFromHexString(req.params.id);
   const response = await mongodb
   .getDb()
   .db()
   .collection("contacts")
-  .remove({ _id: userId }, true);
+  .deleteOne({ _id: userId });
   console.log(response);
   if (response.deletedCount > 0) {
     res.status(204).send();

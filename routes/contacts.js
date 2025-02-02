@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-
 const contactsController = require("../controllers/contacts");
 
 // Get all the contacts
@@ -14,4 +13,5 @@ router.post("/", contactsController.createContact);
 router.put("/:id", contactsController.updateContactById);
 // Delete contact by id
 router.delete("/:id", contactsController.deleteContactById);
+
 module.exports = router;
