@@ -1,18 +1,21 @@
 // the modules
 const express = require("express");
 const bodyParser = require("body-parser");
-
 const MongoClient = require("mongodb").MongoClient;
 
 //Swagger
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
-// Local
+
+// Local mods
 const mongodb = require("./database/connect");
 
+// Server
 const app = express();
+
 // From env flie
 const port = process.env.PORT || 8080;
+
 //Middlewares
 app.use(bodyParser.json());
 
@@ -28,11 +31,12 @@ app.use((req, res, next) => {
     
     next();
   });
-//  import routes
-const contactsRoutes = require("./routes/contacts");
-// routes
 
-app.use("/contacts", contactsRoutes);
+//  import routes
+//const contactsRoutes = require("./routes/contacts");
+// routes
+app.use("/", require("./routes"))
+//app.use("/contacts", contactsRoutes);
 
 
 mongodb.initDb((err, mongodb) => {
