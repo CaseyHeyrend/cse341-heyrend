@@ -1,6 +1,6 @@
 // Get A name
-const getName = (req, res) => {
+const routeJoe = (req, res) => {
     res.send('Joe Heyrend');
   };
   
-  module.exports = { getName };
+  module.exports = { routeJoe };

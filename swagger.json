@@ -34,6 +34,16 @@
           }
         }
       },
+      "/routeJoe": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
       "/contacts/": {
         "get": {
           "summary": "Get all contacts",
