@@ -1,7 +1,14 @@
-const router = require('express').Router();
-const nameController = require("./controllers/name");
 
 // Lesson 1 or Branch Lesson01
-router.get("/", nameController.routeJoeHeyrend);
+const routes = require("express").Router();
+const nameController = require("../controllers/name");
 
-module.exports = router;
+/**
+ * @desc: These are the routes for the lesson1 controller
+ */
+routes.get("/", nameController.routeJoeHeyrend);
+routes.get("/dougheyrend", nameController.routeDougHeyrend);
+routes.get("/samheyrend", nameController.routeSamHeyrend);
+
+
+module.exports = routes;

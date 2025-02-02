@@ -15,8 +15,8 @@ contactsController.getData = async function (req, res, next) {
 // eslint-disable-next-line no-unused-vars
 contactsController.getAll = async (req, res, next) => {
     /*
-    #swagger.summary = 'Get all contacts'
-    #swagger.description = 'Returns all contacts'
+    #swagger.summary = "Get all contacts"
+    #swagger.description = "Returns all contacts"
   */
   const result = await mongodb.getDb().db().collection("contacts").find();
   result.toArray().then((lists) => {
@@ -27,8 +27,8 @@ contactsController.getAll = async (req, res, next) => {
 // eslint-disable-next-line no-unused-vars
 contactsController. getById = async (req, res, next) => {
   /*
-    #swagger.summary = 'Get contact by id'
-    #swagger.description = 'Returns a contact with specified id'
+    #swagger.summary = "Get contact by id"
+    #swagger.description = "Returns a contact with specified id"
   */
   // const userId = new ObjectId(req.params.id);
   const userId = ObjectId.createFromHexString(req.params.id);
@@ -47,8 +47,8 @@ contactsController. getById = async (req, res, next) => {
 // eslint-disable-next-line no-unused-vars
 contactsController.createContact = async (req, res, next) => {
   /*
-    #swagger.summary = 'Insert/Add a contact'
-    #swagger.description = 'Add a contact to the database'
+    #swagger.summary = "Insert/Add a contact"
+    #swagger.description = "Add a contact to the database"
   */
   const contact = {
     firstName: req.body.firstName,
@@ -72,8 +72,8 @@ contactsController.createContact = async (req, res, next) => {
 // eslint-disable-next-line no-unused-vars
 contactsController.updateContactById = async (req, res, next) => {
   /*
-    #swagger.summary = 'Update a existing contact by id'
-    #swagger.description = 'Update a existing contact in the database by id'
+    #swagger.summary = "Update a existing contact by id"
+    #swagger.description = "Update a existing contact in the database by id"
   */
   const userId = ObjectId.createFromHexString(req.params.id);
   const contact = {
