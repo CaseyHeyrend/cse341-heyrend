@@ -3,7 +3,7 @@ const router = express.Router();
 const nameController = require("../controllers/name");
 
 // Lesson 1 or Branch Lesson01
-router.get("/name", nameController.routeJoe);
+router.use("/", require("./name"));
 
 // lesson 2 
 // Week 3
