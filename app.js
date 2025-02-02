@@ -1,7 +1,7 @@
 // the modules
 const express = require("express");
 const bodyParser = require("body-parser");
-// eslint-disable-next-line no-unused-vars
+
 const MongoClient = require("mongodb").MongoClient;
 
 //Swagger
@@ -13,7 +13,6 @@ const mongodb = require("./database/connect");
 const app = express();
 // From env flie
 const port = process.env.PORT || 8080;
-const host = process.env.HOST || "localhost";
 //Middlewares
 app.use(bodyParser.json());
 
@@ -30,19 +29,17 @@ app.use((req, res, next) => {
     next();
   });
 //  import routes
-const nameRoutes = require("./routes/name");
 const contactsRoutes = require("./routes/contacts");
 // routes
-app.use("/routeJoe", nameRoutes);
 app.use("/contacts", contactsRoutes);
 
-// eslint-disable-next-line no-unused-vars
+
 mongodb.initDb((err, mongodb) => {
   if (err) {
     console.log(err);
   } else {
     app.listen(port);
-    console.log(`App Connected to DB and listening on ${host}:${port}`);
+    console.log(`App Connected to DB and listening on ${port}`);
   }
 });
 //Lesson 01
