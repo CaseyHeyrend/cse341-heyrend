@@ -27,7 +27,7 @@ content-type: application/json
 }
 
 ### Delete Contact
-DELETE http://localhost:8080/contacts/6795ac51febb9fbb178590a0 HTTP/1.1
+DELETE http://localhost:8080/contacts/679ed45141e852391a4d0249 HTTP/1.1
 content-type: application/json
 
 
@@ -61,5 +61,7 @@ content-type: application/json
 "firstName": "Patricia", "lastName": "Gulick", "email": "P.Meyer@test.com", "favoriteColor": "Green", "birthday": "12/26/1942" 
 }
 ### Delete Contact
-DELETE https://cse341-heyrend.onrender.com/contacts/6795ac51febb9fbb178590a0 HTTP/1.1
+DELETE https://cse341-heyrend.onrender.com/contacts/679ed45141e852391a4d0249 HTTP/1.1
 content-type: application/json
+
+

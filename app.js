@@ -30,8 +30,10 @@ app.use((req, res, next) => {
     next();
   });
 //  import routes
+const nameRoutes = require("./routes/name");
 const contactsRoutes = require("./routes/contacts");
 // routes
+app.use("/name", nameRoutes);
 app.use("/contacts", contactsRoutes);
 
 // eslint-disable-next-line no-unused-vars

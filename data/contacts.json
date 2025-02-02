@@ -42,4 +42,11 @@
         "favoriteColor": "Pink",
         "birthday": "11/06/1970"
     }
+    {
+        "firstName": "Sam",
+        "lastName": "Snow",
+        "email": "SnowAngel@testmail.com",
+        "favoriteColor": "Gold",
+        "birthday": "05/03/2002"  
+    }
 }
