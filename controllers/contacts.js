@@ -25,7 +25,7 @@ contactsController.getAll = async (req, res, next) => {
   });
 };
 // eslint-disable-next-line no-unused-vars
-contactsController. getById = async (req, res, next) => {
+contactsController.getById = async (req, res, next) => {
   /*
     #swagger.summary = "Get contact by id"
     #swagger.description = "Returns a contact with specified id"
