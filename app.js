@@ -33,10 +33,10 @@ app.use((req, res, next) => {
   });
 
 //  import routes
-//const contactsRoutes = require("./routes/contacts");
+const contactsRoutes = require("./routes/contacts");
 // routes
 app.use("/", require("./routes"))
-//app.use("/contacts", contactsRoutes);
+app.use("/contacts", contactsRoutes);
 
 
 mongodb.initDb((err, mongodb) => {

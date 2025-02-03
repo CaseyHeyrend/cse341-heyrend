@@ -34,26 +34,6 @@
         }
       }
     },
-    "/dougheyrend": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/samheyrend": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
       "/contacts/": {
         "get": {
           "summary": "Get all contacts",
