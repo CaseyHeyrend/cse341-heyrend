@@ -47,5 +47,7 @@ npm install --save-dev swagger-autogen
 npm install --save-dev --save-exact prettier
 
 # It's just a JSON file, so you can use it in any environment.
+npm install globals
 
+npm init @eslint/config@latest
 
