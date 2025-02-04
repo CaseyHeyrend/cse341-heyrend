@@ -40,3 +40,12 @@ npm install mongoose
 # This module allows you to serve auto-generated swagger-ui generated API docs from express,
 npm install swagger-ui-express
 
+# This module performs automatic construction of Swagger documentation. It can identify the endpoints and automatically capture methods such as get, post, put, and so on. 
+npm install --save-dev swagger-autogen
+
+# prettier
+npm install --save-dev --save-exact prettier
+
+# It's just a JSON file, so you can use it in any environment.
+
+
