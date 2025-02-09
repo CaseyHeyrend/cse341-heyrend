@@ -31,16 +31,19 @@ contactsController.getById = async (req, res, next) => {
     #swagger.description = "Returns a contact with specified id"
   */
   // const userId = new ObjectId(req.params.id);
-  const userId = ObjectId.createFromHexString(req.params.id);
-  const result = await mongodb
-    .getDb()
-    .db()
-    .collection("contacts")
-    .findOne({ _id: userId });
-  result.toArray().then((lists) => {
+  try {
+    const userId = ObjectId.createFromHexString(req.params.id);
+    const result = await mongodb.getDb().db().collection("contacts").findOne({ _id: userId });
+
+    if (!result) {
+      return res.status(404).json({ message: "Users not found." });
+    }
     res.setHeader("Content-Type", "application/json");
-    res.status(200).json(lists[0]);
-  });
+    res.status(200).json(result);
+  } catch (error) {
+    console.error("Error getting user:", error);
+    res.status(500).json({ message: "An unexpected error occurred.", error: error.message });
+  }
 };
 // Week 3
 // Create - Post to insert Contact 
@@ -57,17 +60,14 @@ contactsController.createContact = async (req, res, next) => {
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday
   };
-  const response = await mongodb
-  .getDb()
-  .db()
-  .collection("contacts")
-  .insertOne(contact);
+  const response = await mongodb.getDb().db().collection("contacts").insertOne(contact);
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
     res.status(500).json(response.error || "Some error occurred while creating the contact.");
   }
 };
+
 // Updating the Contact
 // eslint-disable-next-line no-unused-vars
 contactsController.updateContactById = async (req, res, next) => {
@@ -83,11 +83,7 @@ contactsController.updateContactById = async (req, res, next) => {
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday,
   };
-  const response = await mongodb
-  .getDb()
-  .db()
-  .collection("contacts")
-  .replaceOne({ _id: userId }, contact);
+  const response = await mongodb.getDb().db().collection("contacts").replaceOne({ _id: userId }, contact);
 
 console.log(response);
 if (response.modifiedCount > 0) {
@@ -95,7 +91,7 @@ if (response.modifiedCount > 0) {
 } else {
   res.status(500).json(response.error || "Some error occurred while updating the contact.");
 }
-}
+};
 // Delete Contact
 // eslint-disable-next-line no-unused-vars
 contactsController.deleteContactById = async (req, res, next) =>{
@@ -104,11 +100,7 @@ contactsController.deleteContactById = async (req, res, next) =>{
     #swagger.description = "Delete a contact in the database by id"
   */
   const userId = ObjectId.createFromHexString(req.params.id);
-  const response = await mongodb
-  .getDb()
-  .db()
-  .collection("contacts")
-  .deleteOne({ _id: userId });
+  const response = await mongodb.getDb().db().collection("contacts").deleteOne({ _id: userId });
   console.log(response);
   if (response.deletedCount > 0) {
     res.status(204).send();
@@ -116,5 +108,5 @@ contactsController.deleteContactById = async (req, res, next) =>{
     res.status(500).json(response.error || "Some error occurred while deleting the contact.");
   }
 
-}
+};
 module.exports = contactsController
