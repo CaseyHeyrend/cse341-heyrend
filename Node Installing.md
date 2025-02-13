@@ -1,53 +1,64 @@
-Node Installing
+# Node Installing
 
-# Having a version of Node
-node --version
+# node --version
+Having a version of Node
 
-# Node Packages Manager
-npm init --y
+# npm init --y
+Node Packages Manager
 
-# Express
-npm install --save express
+# npm install --save express
+Express
 
-# Refresh page with new updates
-npm install nodemon --save-dev
+# npm install nodemon --save-dev
+Refresh page with new updates
 
-# Middleware functions as the name suggests can be used to make changes in the request/response lifecycle of the express. 
-npm install --save body-parser
+# npm install --save body-parser
+Middleware functions as the name suggests can be used to make changes in the request/response lifecycle of the express. 
 
-# Express Sessions Management
-npm install --save express express-session body-parser
+# npm install --save express express-session body-parser
+Express Sessions Management
 
-# File uploads using Express
-npm install --save express body-parser multer
+# npm install --save express body-parser multer
+File uploads using Express
 
+# npm install --save mysql
+interfacing Node with MySQL
 
-# interfacing Node with MySQL
-npm install --save mysql
+# npm install mongodb
+Install the MongoDB Node.js Driver
 
-# Install the MongoDB Node.js Driver
-npm install mongodb
+# npm i --save dotenv
+Install the dotenv node package
 
-# Install the dotenv node package
-npm i --save dotenv
+# npm install cors
+CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
 
-# CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
-npm install cors
+# npm install mongoose
+Mongoose 8.0.0 was released on October 31, 2023. You can find more details on backwards breaking changes in 8.0.0 on our docs site.
 
-# Mongoose 8.0.0 was released on October 31, 2023. You can find more details on backwards breaking changes in 8.0.0 on our docs site.
-npm install mongoose
- 
-# This module allows you to serve auto-generated swagger-ui generated API docs from express,
-npm install swagger-ui-express
+# npm install swagger-ui-express
+This module allows you to serve auto-generated swagger-ui generated API docs from express,
 
-# This module performs automatic construction of Swagger documentation. It can identify the endpoints and automatically capture methods such as get, post, put, and so on. 
-npm install --save-dev swagger-autogen
+# npm install --save-dev swagger-autogen
+This module performs automatic construction of Swagger documentation. It can identify the endpoints and automatically capture methods such as get, post, put, and so on. 
 
-# prettier
-npm install --save-dev --save-exact prettier
+# npm install --save-dev --save-exact prettier
+prettier
 
-# It's just a JSON file, so you can use it in any environment.
-npm install globals
+# npm install globals
+It's just a JSON file, so you can use it in any environment.
 
-npm init @eslint/config@latest
+# npm init @eslint/config@latest
+ESLint is a tool for identifying and reporting on patterns
 
+# npm install --save-dev eslint-config-prettier
+Turns off all rules that are unnecessary or might conflict with Prettier
+
+# npm install --save-dev eslint-config-prettier
+Turns off all rules that are unnecessary or might conflict with Prettier
+
+# npm install --save-dev eslint-plugin-prettier
+Runs Prettier as an ESLint rule and reports differences as individual ESLint issues.
+
+# npm run swagger
+To get swagger.json
