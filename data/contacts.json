@@ -1,4 +1,4 @@
-{
+[
     {
         "firstName":"Joe" ,
         "lastName": "Heyrend",
@@ -41,7 +41,7 @@
         "email": "MichRob@testmail.com",
         "favoriteColor": "Pink",
         "birthday": "11/06/1970"
-    }
+    },
     {
         "firstName": "Sam",
         "lastName": "Snow",
@@ -49,4 +49,4 @@
         "favoriteColor": "Gold",
         "birthday": "05/03/2002"  
     }
-}
+]

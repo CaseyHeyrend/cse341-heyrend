@@ -1,10 +1,13 @@
 {
   "name": "cse341-heyrend",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon server.js",
     "swagger": "node ./swagger.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,21 +24,18 @@
   "description": "",
   "dependencies": {
     "body-parser": "^1.20.3",
-    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongodb": "^6.13.0",
-    "mongoose": "^8.9.6",
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.19.0",
-    "eslint": "^9.19.0",
+    "eslint": "^9.20.1",
     "eslint-config-prettier": "^10.0.1",
-    "globals": "^15.14.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "globals": "^15.15.0",
     "nodemon": "^3.1.9",
-    "prettier": "3.4.2",
-    "prettier-eslint": "^16.3.0",
+    "prettier": "3.5.0",
     "swagger-autogen": "^2.23.7"
   }
 }

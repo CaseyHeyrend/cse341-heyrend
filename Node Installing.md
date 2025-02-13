@@ -49,5 +49,13 @@ npm install --save-dev --save-exact prettier
 # It's just a JSON file, so you can use it in any environment.
 npm install globals
 
+
+
+# ESLint is a tool for identifying and reporting on patterns
 npm init @eslint/config@latest
 
+# Turns off all rules that are unnecessary or might conflict with Prettier
+npm install --save-dev eslint-config-prettier
+
+# Runs Prettier as an ESLint rule and reports differences as individual ESLint issues.
+npm install --save-dev eslint-plugin-prettier

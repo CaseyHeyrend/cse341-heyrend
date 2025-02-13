@@ -3,12 +3,7 @@
 GET http://localhost:8080/
 ### Get contacts
 GET http://localhost:8080/contacts
-### contact 1
-GET http://localhost:8080/contacts/6795a67f1a0707efddcbc1d2
-### contact 2
-GET http://localhost:8080/contacts/6795a6c21a0707efddcbc1d3
-### contact 3
-GET http://localhost:8080/contacts/6795a7131a0707efddcbc1d4
+
 
 ### Create contact Post
 POST http://localhost:8080/contacts/ HTTP/1.1
@@ -30,7 +25,6 @@ content-type: application/json
 DELETE http://localhost:8080/contacts/679ef7571ac462f2e4bc718f HTTP/1.1
 content-type: application/json
 
-
 ### Swagger
 GET http://localhost:8080/api-docs/
 
@@ -40,12 +34,6 @@ GET https://cse341-heyrend.onrender.com
 
 ### contacts
 GET https://cse341-heyrend.onrender.com/contacts
-### contact 1
-GET https://cse341-heyrend.onrender.com/contacts/6795a67f1a0707efddcbc1d2
-### contact 2
-GET https://cse341-heyrend.onrender.com/contacts/6795a6c21a0707efddcbc1d3
-### contact 3
-GET https://cse341-heyrend.onrender.com/contacts/6795a7131a0707efddcbc1d4
 
 ### Create contact Post
 POST https://cse341-heyrend.onrender.com/contacts/ HTTP/1.1
@@ -65,7 +53,4 @@ content-type: application/json
 ### Delete Contact
 DELETE https://cse341-heyrend.onrender.com/contacts/679ef7571ac462f2e4bc718f HTTP/1.1
 content-type: application/json
-
-### Swagger
-GET https://cse341-heyrend.onrender.com/api-docs/
 
