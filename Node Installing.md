@@ -62,3 +62,6 @@ Runs Prettier as an ESLint rule and reports differences as individual ESLint iss
 
 # npm run swagger
 To get swagger.json
+
+# npm install validatorjs
+The validatorjs library makes data validation in JavaScript very easy in both the browser and Node.js.
